@@ -1,0 +1,32 @@
+<meta charset="UTF-8"> 
+<html>
+    <header>
+        <script src="../lib/browser-polyfill.min.js"></script>
+        <script src="../ghunt.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="interface.css">
+    </header>
+    <!-- CSS only -->
+    <body>
+        <div style="text-align: center">
+            <img src=../icons/ghunt_banner.png style="height:80px; margin:10"></img>
+            <div class="method">
+                <p style="padding-right: px">Method 1 (base64)</p>
+                <button id="method_base64" class="btn btn-primary">Launch</button>
+            </div>
+            <hr style="margin:0px 20px">
+            <div class="method">
+                <p style="padding-right: 7px">Method 2 (server)</p>
+                <button id="method_server" class="btn btn-primary">Launch</button>
+            </div>
+            <div class="status">
+                <p class="status_title">Status :<p>
+                <p class="status_text">Waiting for interaction</p>
+            </div>
+        </div>
+    </body>
+</html>

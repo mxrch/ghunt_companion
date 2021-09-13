@@ -1,0 +1,32 @@
+body {
+    width:300px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+div.method {
+    display: flex; justify-content: space-around;
+    align-items:baseline;
+    padding: 10px;
+}
+
+div.method button {
+    font-size:14px;
+    padding: 10px 30px;
+}
+
+div.method p {
+    font-size:14px;
+    margin: 0 10px;
+}
+
+div.status p.status_title {
+    font-size:20px;
+    padding: 0;
+}
+
+div.status p.status_text {
+    padding: 0px 20px;
+}
