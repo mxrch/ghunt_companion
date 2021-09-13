@@ -5,7 +5,7 @@ This development of this extension has followed Firefox guidelines to use the Pr
 Therefore, this extension has a **single branch for all browsers**.
 
 ## Usage
-You can choose between these 2 methods to configure GHunt through the Companion extension :\
+You can choose between these 2 methods to configure GHunt through the Companion extension :
 - Method 1 => It gets the needed cookies, encodes them in base64 and puts them into your clipboard.
 - Method 2 (fastest) => It gets the needed cookies, and send it to GHunt (who should be in listening on port 60067).
 
