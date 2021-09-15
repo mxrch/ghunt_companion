@@ -1,7 +1,7 @@
 # GHunt Companion
 Load all needed cookies to use GHunt peacefully, fast.
 
-This development of this extension has followed Firefox guidelines to use the Promise-based WebExtension/BrowserExt API being standardized by the [W3 Browser Extensions](https://www.w3.org/community/browserext/) group, and is using [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) to provide a **cross-browser compatibility** with no changes.\
+The development of this extension has followed Firefox guidelines to use the Promise-based WebExtension/BrowserExt API being standardized by the [W3 Browser Extensions](https://www.w3.org/community/browserext/) group, and is using [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) to provide a **cross-browser compatibility** with no changes.\
 Therefore, this repository has a **single branch for all browsers**.
 
 ## Usage
