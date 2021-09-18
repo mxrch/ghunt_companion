@@ -1,22 +1,4 @@
 (function() {
-    
-    function checkCookies(cookies) {
-    LSID = false;
-    APISID = false;
-    logged_in = false;
-    for (let cookie of cookies) {
-        if (cookie.name == "LSID") {
-            LSID = true;
-        } else if (cookie.name == "APISID") {
-            APISID = true;
-        }
-        }
-        if (LSID && APISID) {
-            logged_in = true;
-        }
-
-        return logged_in
-    }
 
     async function sendCookies(cookies) {
         exit = false;
@@ -46,7 +28,6 @@
             return false;
         }
 
-        console.log("tjr vivant lol");
         return true;
 }
 
@@ -58,22 +39,18 @@
     async function main(choice) {
         var status_label = document.getElementsByClassName("status_text")[0];
         
-        var cookies = await browser.cookies.getAll({});
+        var cookies = await browser.cookies.getAll({"domain":"google.com"});
 
-        logged_in = checkCookies(cookies);
+        wanted = ["SID", "SSID", "APISID", "SAPISID", "HSID", "LSID", "__Secure-3PSID"]
 
-        if (logged_in) {
+        cookies = cookies.filter(function(obj) {return wanted.includes(obj.name)})
+        cookies = Object.fromEntries(cookies.map(x => [x.name, x.value]))
+
+        if (Object.keys(cookies).length >= wanted.length) {
             console.log("Logged-in !");
             encoded_cookies = encodeCookies(cookies);
 
-            if (choice == "base64") {
-
-                navigator.clipboard.writeText(encoded_cookies).then(function() {
-                    status_label.innerHTML = "Cookies copied to the clipboard !";
-                }, function(err) {
-                    status_label.innerHTML = 'Could not copy text :( error => ' + err;
-                });
-            } else if (choice == "server") {
+            if (choice == "server") {
                 status_label.innerHTML = "Feeding GHunt with cookies...";
                 success = await sendCookies(encoded_cookies);
                 if (success) {
@@ -82,7 +59,14 @@
                     status_label.innerHTML = "Can't contact GHunt on 127.0.0.1:60067 ...";
                 }
                 
-            }
+            } else if (choice == "base64") {
+
+                navigator.clipboard.writeText(encoded_cookies).then(function() {
+                    status_label.innerHTML = "Cookies copied to the clipboard !";
+                }, function(err) {
+                    status_label.innerHTML = 'Could not copy text :( error => ' + err;
+                });
+            } 
 
         } else {
             status_label.innerHTML = "Please log in into your Google account.";
@@ -94,10 +78,10 @@
     }
 
     document.addEventListener("click", function(e) {
-        if (e.target.id == "method_base64") {
-            main("base64");
-        } else if (e.target.id == "method_server") {
+        if (e.target.id == "method_server") {
             main("server");
+        } else if (e.target.id == "method_base64") {
+            main("base64");
         };
     });
 
