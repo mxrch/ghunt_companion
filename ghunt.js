@@ -70,7 +70,7 @@
 
         } else {
             status_label.innerHTML = "Please log in into your Google account.";
-            var tab = await browser.tabs.create({
+            await browser.tabs.create({
                 "url": "https://accounts.google.com"
             });
         };
