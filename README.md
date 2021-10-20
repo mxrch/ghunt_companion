@@ -13,4 +13,7 @@ You can choose between these 2 methods to configure GHunt through the Companion 
 ![Screenshot](https://files.catbox.moe/zu3tis.png)
 
 ## Installation
-I wait until extension is approved in the Firefox, Chrome, Edge and Opera store, and I'll be updating the Readme.
+
+[![Firefox](https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/fr/firefox/addon/ghunt-companion/)&nbsp;&nbsp;&nbsp;[![Chrome](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/ghunt-companion/dpdcofblfbmmnikcbmmiakkclocadjab)&nbsp;&nbsp;&nbsp;[![Edge](https://user-images.githubusercontent.com/11660256/111323589-4f4c7c00-866a-11eb-80ff-da7de777d7c0.png)](https://microsoftedge.microsoft.com/addons/detail/ghunt-companion/jhgmpcigklnbjglpipnbnjhdncoihhdj)
+
+*For Opera users, addons reviewers [seems dead](https://forums.opera.com/topic/16609/very-long-extension-moderation-process/255) so you should use the Chrome Web Store.*
