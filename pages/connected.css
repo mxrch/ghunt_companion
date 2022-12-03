@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+div.mid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.mid h1#title {
+    font-size: 60px;
+    font-weight:700;
+    margin-bottom: 30px;
+}
+
+div.mid p#desc {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+table#methods_list th {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p {
+  margin:0;
+
+}
+
+table#methods_list {
+    width: 400px;
+}
+
+table#methods_list th {
+    font-weight: 500;
+}
+
+div#methods_div {
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+    padding: 25px 15px 25px 25px;
+    margin: 25px;
+}
+
+div.header img {
+    display:inline-block;
+    top:0;
+    width:6%;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+div.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+div.footer img {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 33%;
+    max-width: 600px;
+    left: 50%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+p.status_title {
+    font-size:20px;
+    margin-bottom: 0px;
+}
+
+p.status_text {
+    margin-top: 10px;
+}
+
+button.btn {
+    width: 100px;
+    border-radius: 2em,
+}

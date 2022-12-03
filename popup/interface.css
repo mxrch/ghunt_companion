@@ -1,8 +1,9 @@
 body {
-    width:300px;
+    color: white;
+    padding: 15px;
 }
 
-p {
+p, button {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -14,19 +15,11 @@ div.method {
 
 div.method button {
     font-size:14px;
+    font-weight: 500;
     padding: 10px 30px;
 }
 
 div.method p {
     font-size:14px;
     margin: 0 10px;
-}
-
-div.status p.status_title {
-    font-size:20px;
-    padding: 0;
-}
-
-div.status p.status_text {
-    padding: 0px 20px;
 }

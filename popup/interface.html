@@ -1,32 +1,22 @@
+<!DOCTYPE html>
 <meta charset="UTF-8"> 
 <html>
     <header>
         <script src="../lib/browser-polyfill.min.js"></script>
-        <script src="../ghunt.js"></script>
+        <script type="module" src="../lib/constants.js"></script>
+        <script type="module" src="../lib/utils.js"></script>
+        <script type="module" src="../ghunt.js"></script>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="../assets/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="interface.css">
     </header>
     
     <body>
         <div style="text-align: center">
-            <img src=../icons/ghunt_banner.png style="height:80px; margin:10"></img>
+            <img src=../assets/ghunt_full_light.png style="height:80px; margin:10"></img>
             <div class="method">
-                <p style="padding-right: 7px">Method 1 (server)</p>
-                <button id="method_server" class="btn btn-primary">Launch</button>
-            </div>
-            <hr style="margin:0px 20px">
-            <div class="method">
-                <p style="padding-right: px">Method 2 (base64)</p>
-                <button id="method_base64" class="btn btn-primary">Launch</button>
-            </div>
-            
-            <div class="status">
-                <p class="status_title">Status :<p>
-                <p class="status_text">Waiting for interaction</p>
+                <button id="start_sync" class="btn btn-primary">🦖 Synchronize to GHunt</button>
             </div>
         </div>
     </body>

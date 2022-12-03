@@ -2,27 +2,30 @@
 
     "manifest_version": 2,
     "name": "GHunt Companion",
-    "version": "1.3.2",
+    "version": "2.0.0",
   
     "description": "Load all needed cookies to use GHunt peacefully.",
   
     "icons": {
-      "48": "icons/ghunt_square.png"
+      "48": "assets/ghunt_square.png"
     },
     "permissions": [
+      "webRequest",
+      "webRequestBlocking",
       "*://*.google.com/*",
+      "storage",
       "cookies"
     ],
   
     "content_scripts": [
       {
-        "js": ["lib/browser-polyfill.min.js", "ghunt.js"],
+        "js": ["lib/browser-polyfill.min.js"],
         "matches": ["*://*.google.com/*"]
       }
     ],
 
     "background": {
-      "scripts": ["lib/browser-polyfill.min.js", "ghunt.js"]
+      "page": "background/background.html"
     },
 
     "web_accessible_resources": [
@@ -30,7 +33,7 @@
     ],
 
     "browser_action": {
-      "default_icon": "icons/ghunt_square.png",
+      "default_icon": "assets/ghunt_square.png",
       "default_title": "GHunt Companion",
       "default_popup": "popup/interface.html"
     }
