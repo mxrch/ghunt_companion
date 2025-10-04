@@ -4,17 +4,12 @@ import * as co from "../lib/constants.js"
 
 // Main functions
 
-async function isConnected(response) {
+async function isConnected(details) {
     console.log("Connected url pattern detected, checking...");
-    var auth_data = await utils.checkSession(response);
+    var auth_data = await utils.checkSession(details);
     if (auth_data.is_connected) {
-        var tabs = await browser.tabs.query({"url": co.CONNECTED_URL_PATTERN});
-        if (tabs.length > 0) {
-            var target_tab = tabs[0];
-            await browser.tabs.update(target_tab.id, {"active": true, "url": "../"+co.CONNECTED_LOCAL_PAGE});
-        };
+        await browser.tabs.update(auth_data.tab.id, {"active": true, "url": "../"+co.CONNECTED_LOCAL_PAGE});
     };
-
 }
 
 async function customizeLogin(details) {
